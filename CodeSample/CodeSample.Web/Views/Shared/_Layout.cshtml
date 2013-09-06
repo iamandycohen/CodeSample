@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+        <script type="text/javascript">
+            window.siteRoot = '@Url.Content("~/")';
+        </script>
     </head>
     <body>
         <header>
