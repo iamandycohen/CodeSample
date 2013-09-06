@@ -261,6 +261,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
+    <Content Include="Scripts\ko.jqButtons.js" />
+    <Content Include="Scripts\ko.jqDatepicker.js" />
+    <Content Include="Scripts\ko.jqDialog.js" />
+    <Content Include="Scripts\ko.jqMenu.js" />
+    <Content Include="Scripts\ko.jqTabs.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

@@ -19,7 +19,8 @@ namespace CodeSample.Web
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
-                        "~/Scripts/knockout-{version}.js"));
+                        "~/Scripts/knockout-{version}.js",
+                        "~/Scripts/ko.*"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/app/*.js", "~/Scripts/app/models/*.js", "~/Scripts/app/viewModels/*.js"));
