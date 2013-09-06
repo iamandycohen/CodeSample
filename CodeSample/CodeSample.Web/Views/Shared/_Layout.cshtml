@@ -6,12 +6,13 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
+        @Styles.Render("~/Content/themes/base/css")
         @Scripts.Render("~/bundles/modernizr")
         <script type="text/javascript">
             window.siteRoot = '@Url.Content("~/")';
         </script>
     </head>
-    <body>
+    <body id="@ViewBag.PageId">
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -41,6 +42,7 @@
         </footer>
 
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryui")
         @Scripts.Render("~/bundles/knockout")
         @Scripts.Render("~/bundles/app")
         @RenderSection("scripts", required: false)

@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    ViewBag.PageId = "index";
 }
 
 @section scripts {
@@ -9,6 +10,9 @@
     </script>
 }
 
-<ul data-bind="foreach: pages">
+<h3>Pages<a href="#"><span class="ui-icon ui-icon-plus"></span></a></h3>
+
+<ul class="simpleList" data-bind="foreach: pages">
     <li><span data-bind="text: Title"></span></li>
 </ul>
+
