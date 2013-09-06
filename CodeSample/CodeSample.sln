@@ -10,6 +10,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{AE48E9
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSample.Contracts", "CodeSample.Contracts\CodeSample.Contracts.csproj", "{3662AE2B-34DC-4BB0-BACA-D511878A1DBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeSample.Logic", "CodeSample.Logic\CodeSample.Logic.csproj", "{F4FE4EE0-3B72-4062-9AB8-A6A9347119EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +24,14 @@ Global
 		{7667FF28-6107-4A89-B5B1-FA9ACEA70D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7667FF28-6107-4A89-B5B1-FA9ACEA70D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7667FF28-6107-4A89-B5B1-FA9ACEA70D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3662AE2B-34DC-4BB0-BACA-D511878A1DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3662AE2B-34DC-4BB0-BACA-D511878A1DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3662AE2B-34DC-4BB0-BACA-D511878A1DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3662AE2B-34DC-4BB0-BACA-D511878A1DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4FE4EE0-3B72-4062-9AB8-A6A9347119EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FE4EE0-3B72-4062-9AB8-A6A9347119EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FE4EE0-3B72-4062-9AB8-A6A9347119EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FE4EE0-3B72-4062-9AB8-A6A9347119EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

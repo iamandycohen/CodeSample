@@ -290,6 +290,16 @@
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeSample.Contracts\CodeSample.Contracts.csproj">
+      <Project>{3662ae2b-34dc-4bb0-baca-d511878a1dba}</Project>
+      <Name>CodeSample.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CodeSample.Logic\CodeSample.Logic.csproj">
+      <Project>{f4fe4ee0-3b72-4062-9ab8-a6a9347119ea}</Project>
+      <Name>CodeSample.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
