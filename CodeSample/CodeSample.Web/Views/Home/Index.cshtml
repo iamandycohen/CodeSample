@@ -10,6 +10,29 @@
     </script>
 }
 
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                This code sample demostrates a basic RESTful CRUD application.  It allows you to create "Pages".  The Page model is a simple POCO object, with just 3 properties; Id, Title, and Content. In the interest of time, there is no persistence aside from a static class to hold the data.  It uses the following technologies at a very basic level:
+            </p>
+
+            <ul>
+                <li>ASP.NET MVC 4</li>
+                <li>ASP.NET Web API</li>
+                <li>KnockoutJS</li>
+                <li>Knockout Validation</li>
+                <li>jQuery</li>
+                <li>jQueryUI</li>
+            </ul>
+
+            <p>
+                It should be noted, that this my main constraint was time.  Instead of bringing back the server side ModelState errors, I have brought them back using "Toast".
+            </p>
+        </div>
+    </section>
+}
+
 <h3>Pages<a href="#"><span class="ui-icon ui-icon-plus" data-bind="click: addPage"></span></a></h3>
 
 <ul class="simpleList">

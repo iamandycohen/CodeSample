@@ -6,6 +6,7 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
+        <link href="~/Content/toastr.css" rel="stylesheet" />@*Couldn't get toastr.css to minify correctly because of the base64 encoded images*@
         @Styles.Render("~/Content/themes/base/css")
         @Scripts.Render("~/bundles/modernizr")
         <script type="text/javascript">
@@ -16,7 +17,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("Code Sample", "Index", "Home")</p>
                 </div>
                 <div class="float-right">
                     <nav>
@@ -44,6 +45,7 @@
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jqueryui")
         @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/toastr")
         @Scripts.Render("~/bundles/app")
         @RenderSection("scripts", required: false)
     </body>

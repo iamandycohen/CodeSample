@@ -23,6 +23,9 @@ namespace CodeSample.Web
                         "~/Scripts/knockout.validation.js",
                         "~/Scripts/ko.*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/toastr").Include(
+                        "~/Scripts/toastr.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/json2.js",
                         "~/Scripts/app/*.js", "~/Scripts/app/models/*.js", "~/Scripts/app/viewModels/*.js"));
@@ -47,6 +50,7 @@ namespace CodeSample.Web
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
         }
     }
 }

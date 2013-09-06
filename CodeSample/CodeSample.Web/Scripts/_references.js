@@ -14,3 +14,4 @@
 /// <reference path="ko.jqDialog.js" />
 /// <reference path="ko.jqMenu.js" />
 /// <reference path="ko.jqTabs.js" />
+/// <reference path="toastr.js" />

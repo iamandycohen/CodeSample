@@ -9,7 +9,8 @@ app['dataContext'] = (function (app) {
     },
     getJson = function (method, callback) {
         $.get(getUrl(method))
-            .done(callback);
+            .done(callback)
+            .fail(failure);
     },
     postJson = function (method, data, callback) {
         $.ajax({
@@ -18,18 +19,25 @@ app['dataContext'] = (function (app) {
             data: JSON.stringify(data),
             contentType: 'application/json; charset=UTF-8'
         })
-            .done(function () {
-                callback();
-            });
+            .done(callback)
+            .fail(failure);
     },
     deleteRequest = function (method, callback) {
         $.ajax({
             type: 'DELETE',
             url: getUrl(method)
         })
-            .done(function () {
-                callback();
-            });
+            .done(callback)
+            .fail(failure);
+    },
+    failure = function (jqXHR) {
+        var responseText = { Message: 'An error has occured.' };
+        try {
+            responseText = JSON.parse(jqXHR.responseText);
+        } catch (e) {
+
+        }
+        toastr.error(JSON.stringify(responseText));
     };
 
     return {
