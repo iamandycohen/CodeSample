@@ -604,6 +604,11 @@ a {
     display: inline-block;
 }
 
+.validationMessage {
+    display: block;
+    color: red;
+}
+
 /* Pages */
 
 #index {

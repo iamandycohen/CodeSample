@@ -6,7 +6,7 @@ app.models = app.models || {};
 app.models['Page'] = function (item) {
     var self = this;
     self.Id = ko.observable();
-    self.Title = ko.observable();
+    self.Title = ko.observable().extend({ required: { message: 'The "Title" field is required.' } });
     self.Content = ko.observable();
 
     if (typeof item !== 'undefined') {

@@ -10,5 +10,8 @@ namespace CodeSample.Contracts
     public interface IPageService
     {
         IList<Page> GetPages();
+        bool UpdatePage(Guid id, Page page);
+        bool AddPage(Page page);
+        bool DeletePage(Guid id);
     }
 }

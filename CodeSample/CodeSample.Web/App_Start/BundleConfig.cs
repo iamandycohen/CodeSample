@@ -20,9 +20,11 @@ namespace CodeSample.Web
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js",
+                        "~/Scripts/knockout.validation.js",
                         "~/Scripts/ko.*"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                        "~/Scripts/json2.js",
                         "~/Scripts/app/*.js", "~/Scripts/app/models/*.js", "~/Scripts/app/viewModels/*.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

@@ -20,9 +20,32 @@ app.viewModels['indexViewModel'] = (function (app) {
             selectedPage(new app.models.Page(this));
         },
         savePage = function () {
-            if (console && console.log) {
-                console.log({ 'this': this, 'arguments': arguments });
+
+            var errors = ko.validation.group(selectedPage());
+            if (errors().length > 0) {
+                errors.showAllMessages();
+            } else {
+                var toSave = ko.toJS(selectedPage);
+                if (toSave.Id) {
+                    app.dataContext.updatePage(toSave.Id, toSave, savePageCallback);
+                } else {
+                    app.dataContext.addPage(toSave, savePageCallback);
+                }
             }
+        },
+        savePageCallback = function () {
+            selectedPage(null);
+            loadPages();
+        },
+        deletePage = function () {
+            var id = ko.utils.unwrapObservable(this.Id);
+            app.dataContext.deletePage(id, deletePageCallback);
+        },
+        deletePageCallback = function () {
+            loadPages();
+        },
+        cancelEdit = function () {
+            selectedPage(null);
         };
         
 
@@ -34,7 +57,9 @@ app.viewModels['indexViewModel'] = (function (app) {
         selectedPage: selectedPage,
         addPage: addPage,
         editPage: editPage,
-        savePage: savePage
+        savePage: savePage,
+        cancelEdit: cancelEdit,
+        deletePage: deletePage
     };
 
 })(app);

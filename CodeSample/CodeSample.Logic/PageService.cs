@@ -25,5 +25,41 @@ namespace CodeSample.Logic
         {
             return _data;
         }
+
+        public bool UpdatePage(Guid id, Page page)
+        {
+            var pageToUpdate = _data.FirstOrDefault(e => e.Id == id);
+            if (pageToUpdate != null)
+            {
+                pageToUpdate.Title = page.Title;
+                pageToUpdate.Content = page.Content;
+                return true;
+            }
+            return false;
+        }
+
+        public bool AddPage(Page page)
+        {
+            var pageToInsert = new Page
+            {
+                Id = Guid.NewGuid(),
+                Title = page.Title,
+                Content = page.Content
+            };
+            _data.Add(pageToInsert);
+
+            return true;
+        }
+
+        public bool DeletePage(Guid id)
+        {
+            var pageToDelete = _data.FirstOrDefault(e => e.Id == id);
+            if (pageToDelete != null)
+            {
+                _data.Remove(pageToDelete);
+                return true;
+            }
+            return false;
+        }
     }
 }
