@@ -50,7 +50,7 @@ namespace CodeSample.Web
         private static void InitializeContainer(Container container)
         {
             var webLifestyle = new WebRequestLifestyle();
-            container.Register<ITestService, TestService>(webLifestyle);
+            container.Register<IPageService, PageService>(webLifestyle);
 
         }
     }

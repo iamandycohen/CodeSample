@@ -6,4 +6,5 @@
 /// <reference path="modernizr-2.6.2.js" />
 /// <reference path="app/dataContext.js" />
 /// <reference path="app/utils.js" />
+/// <reference path="app/models/Page.js" />
 /// <reference path="app/viewModels/indexViewModel.js" />

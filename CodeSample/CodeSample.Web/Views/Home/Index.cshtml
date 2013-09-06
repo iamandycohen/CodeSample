@@ -8,3 +8,7 @@
         ko.applyBindings(app.viewModels.indexViewModel);
     </script>
 }
+
+<ul data-bind="foreach: pages">
+    <li><span data-bind="text: Title"></span></li>
+</ul>

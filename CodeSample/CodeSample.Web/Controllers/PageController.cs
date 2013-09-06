@@ -11,16 +11,19 @@ namespace CodeSample.Web.Controllers
     public class PageController : ApiController
     {
 
-        private readonly ITestService _testService;
+        private readonly IPageService _pageService;
 
-        public PageController(ITestService testService)
+        public PageController(IPageService pageService)
         {
-            _testService = testService;
+            _pageService = pageService;
         }
 
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, new { hello = "world" });
+
+            var pages = _pageService.GetPages();
+
+            return Request.CreateResponse(HttpStatusCode.OK, pages);
         }
     }
 }
