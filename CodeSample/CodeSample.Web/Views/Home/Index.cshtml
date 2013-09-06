@@ -16,8 +16,17 @@
     <li><span data-bind="text: Title"></span><a href="#"><span class="ui-icon ui-icon-pencil"></span></a><a href="#"><span class="ui-icon ui-icon-trash"></span></a></li>
 </ul>
 
-<div style="display: none" data-bind="jqDialog: { autoOpen: false, modal: true, resizable: false }, openDialog: selectedPage, template: { name: 'pageEditor', data: selectedPage, if: selectedPage } ">
+<div style="display: none" data-bind="jqDialog: { autoOpen: false, modal: true, resizable: false, width: '600px' }, openDialog: selectedPage, template: { name: 'pageEditor', data: selectedPage, if: selectedPage } ">
 </div>
 <script type="text/html" id="pageEditor">
-    <span data-bind="text: Id"></span>
+    <div>
+        <label><span>Title</span>
+            <input type="text" data-bind="value: Title" />
+        </label>
+    </div>
+    <div>
+        <label><span>Content</span>
+            <textarea data-bind="value: Content"></textarea>
+        </label>
+    </div>
 </script>
