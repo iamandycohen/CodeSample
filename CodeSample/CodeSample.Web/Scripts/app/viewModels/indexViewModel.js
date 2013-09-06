@@ -15,7 +15,16 @@ app.viewModels['indexViewModel'] = (function (app) {
         },
         addPage = function () {
             selectedPage(new app.models.Page());
+        },
+        editPage = function () {
+            selectedPage(new app.models.Page(this));
+        },
+        savePage = function () {
+            if (console && console.log) {
+                console.log({ 'this': this, 'arguments': arguments });
+            }
         };
+        
 
     return {
         init: function () {
@@ -23,7 +32,9 @@ app.viewModels['indexViewModel'] = (function (app) {
         },
         pages: pages,
         selectedPage: selectedPage,
-        addPage: addPage
+        addPage: addPage,
+        editPage: editPage,
+        savePage: savePage
     };
 
 })(app);
