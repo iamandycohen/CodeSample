@@ -23,6 +23,7 @@ namespace CodeSample.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+            SimpleInjectorConfig.Register();
         }
     }
 }
