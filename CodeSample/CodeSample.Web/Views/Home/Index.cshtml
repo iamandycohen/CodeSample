@@ -10,9 +10,14 @@
     </script>
 }
 
-<h3>Pages<a href="#"><span class="ui-icon ui-icon-plus"></span></a></h3>
+<h3>Pages<a href="#"><span class="ui-icon ui-icon-plus" data-bind="click: addPage"></span></a></h3>
 
 <ul class="simpleList" data-bind="foreach: pages">
-    <li><span data-bind="text: Title"></span></li>
+    <li><span data-bind="text: Title"></span><a href="#"><span class="ui-icon ui-icon-pencil"></span></a><a href="#"><span class="ui-icon ui-icon-trash"></span></a></li>
 </ul>
 
+<div style="display: none" data-bind="jqDialog: { autoOpen: false, modal: true, resizable: false }, openDialog: selectedPage, template: { name: 'pageEditor', data: selectedPage, if: selectedPage } ">
+</div>
+<script type="text/html" id="pageEditor">
+    <span data-bind="text: Id"></span>
+</script>
